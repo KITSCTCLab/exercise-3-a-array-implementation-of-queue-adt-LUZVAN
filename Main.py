@@ -7,7 +7,9 @@ class Solution:
           front: An integer which denotes the index of the element at the front of the queue.
           rear: An integer which denotes the index of the element at the rear of the queue.
           size: An integer which represents the size of stack and queue.
-     # Write your code here
+      """
+
+    # Write your code here
     def __init__(self, size):
         """Inits Solution with stack, queue, size, top, front and rear.
         Arguments:
@@ -118,7 +120,6 @@ class Solution:
         
 
 
-
 # read the string text
 text = input()
 
@@ -131,6 +132,8 @@ solution = Solution(length_of_text)
 # push/enqueue all the characters of string text to stack
 for index in range(length_of_text):
     # Write code here
+    solution.push_character(text[index])
+    solution.enqueue_character(text[index])
 
 is_palindrome = True
 '''
@@ -140,7 +143,10 @@ compare both characters
 If the comparison fails, set is_palindrome as False.
 '''
 # Write the necessary logic
-
+for index in range(length_of_text):
+    if  solution.pop_character() != solution.dequeue_character():
+        is_palindrome = False
+        break
 
 # finally print whether string text is palindrome or not.
 if is_palindrome:
