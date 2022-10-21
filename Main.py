@@ -7,8 +7,7 @@ class Solution:
           front: An integer which denotes the index of the element at the front of the queue.
           rear: An integer which denotes the index of the element at the rear of the queue.
           size: An integer which represents the size of stack and queue.
-      """
-   # Write your code here
+     # Write your code here
     def __init__(self, size):
         """Inits Solution with stack, queue, size, top, front and rear.
         Arguments:
@@ -117,6 +116,7 @@ class Solution:
             self.front += 1
             return data
         
+
 
 
 # read the string text
